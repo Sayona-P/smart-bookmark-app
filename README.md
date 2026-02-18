@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Smart Bookmark App
 
-## Getting Started
+A **Next.js + Supabase** bookmark app with realtime updates and Google login.  
+Built with **Next.js App Router**, **Supabase Auth & Database**, and **Tailwind CSS** for styling.  
 
-First, run the development server:
+## Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+[https://your-vercel-url.vercel.app](https://your-vercel-url.vercel.app)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Google Login with Supabase Auth
+- Add, Delete bookmarks
+- Realtime updates across multiple tabs
+- Responsive UI with Tailwind CSS
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Frontend:** Next.js (App Router)
+- **Backend:** Supabase (Auth, Database, Realtime)
+- **Styling:** Tailwind CSS
+- **Deployment:** Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Setup Instructions
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Install Dependencies
+
+# Supabase Setup
+
+Create a project on Supabase
+Create a table bookmarks with columns
+Enable Realtime for the table.
+Go to Authentication → URL Configuration
+Add your app URL for Site URL and Redirect URLs.
+
+#Clone the Repo
+
+# Deployment on Vercel
+
+Go to Vercel
+ → Import Git Repository.
+Select smart-bookmark-app.
+Add Environment Variables:
+NEXT_PUBLIC_SUPABASE_URL
+NEXT_PUBLIC_SUPABASE_ANON_KEY
+Deploy.
+Make sure Supabase URL Configuration includes the deployed Vercel URL.
+
+
+
+# Problems I Faced and How I Solved Them
+
+Tailwind CSS Not Working Initially
+
+Installed manually using npm install -D tailwindcss postcss autoprefixer
+
+Initialized with npx tailwindcss init -p
+
+Added @tailwind base; @tailwind components; @tailwind utilities; to globals.css
+
+Realtime Updates Not Working
+
+Fixed by subscribing to the bookmarks table using Supabase channel in useEffect
+
+Called fetchBookmarks on payload to update state
+git clone https://github.com/YOUR_USERNAME/smart-bookmark-app.git
+cd smart-bookmark-app
