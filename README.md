@@ -70,5 +70,5 @@ Realtime Updates Not Working
 Fixed by subscribing to the bookmarks table using Supabase channel in useEffect
 
 Called fetchBookmarks on payload to update state
-git clone https://github.com/YOUR_USERNAME/smart-bookmark-app.git
+git clone https://github.com/Sayona-P/smart-bookmark-app.git
 cd smart-bookmark-app
