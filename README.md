@@ -5,7 +5,7 @@ Built with **Next.js App Router**, **Supabase Auth & Database**, and **Tailwind 
 
 ## Live Demo
 
-[https://your-vercel-url.vercel.app](https://your-vercel-url.vercel.app)
+https://smart-bookmark-app-blue-one.vercel.app/
 
 ---
 
