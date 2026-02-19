@@ -57,7 +57,13 @@ Make sure Supabase URL Configuration includes the deployed Vercel URL.
 
 # Problems I Faced and How I Solved Them
 
-Tailwind CSS Not Working Initially
+1- Supabase UI Complexity
+
+Initially, navigating the Supabase dashboard and setting up authentication, RLS policies, and Realtime was confusing.
+
+Solved by referring to multiple platforms, tutorials, and Supabase docs to configure table and policies correctly.
+
+2 -Tailwind CSS Not Working Initially
 
 Installed manually using npm install -D tailwindcss postcss autoprefixer
 
@@ -65,10 +71,16 @@ Initialized with npx tailwindcss init -p
 
 Added @tailwind base; @tailwind components; @tailwind utilities; to globals.css
 
-Realtime Updates Not Working
+3 - Realtime Updates Not Working
 
 Fixed by subscribing to the bookmarks table using Supabase channel in useEffect
 
 Called fetchBookmarks on payload to update state
+How it works:
+Supabase Realtime allows the app to listen to changes in the database as they happen.
+By subscribing to the bookmarks table via a Supabase channel, the app automatically updates the React state whenever a bookmark is inserted, updated, or deleted.
+This ensures the bookmark list updates instantly across all open tabs without refreshing the page.
+
+
 git clone https://github.com/Sayona-P/smart-bookmark-app.git
 cd smart-bookmark-app
